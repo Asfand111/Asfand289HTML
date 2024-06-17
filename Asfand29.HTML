@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media quiries</title>
+    <style>
+    .container{
+        display: grid;
+        grid-gap: 1rem;
+        background-color: rgb(255, 255, 188);
+        grid-template-areas: 
+        'nav nav nav nav'
+        'para para para side'
+        'foo foo foo foo'
+        ;
+    }
+    .item{
+        border: 2px solid black;
+    }
+    @media only screen and (max-width: 300px;){
+        body{
+            background-color: red;
+        }
+    }
+    @media (min-width: 300px) and (max-width: 500px){
+        body{
+            background-color: blue;
+        }
+    }
+    @media (min-width: 500px) and (max-width: 800px){
+        body{
+            background-color: yellow;
+        }
+        .pp{
+            width: 750px;
+        }
+        .container{
+    display: grid;
+    grid-gap: 1rem;
+    background-color: rgb(255, 255, 188);
+    grid-template-areas: 
+    'nav nav nav nav'
+    'para para para para'
+    'side side side side'
+    'foo foo foo foo'
+    ;
+}
+    }
+    @media (min-width: 800px){
+        body{
+            background-color: green;
+        }
+    }
+    #nav{
+        display: flex;
+        
+        grid-area: nav;
+    }
+    .div{
+        
+    }
+    #para{
+        grid-area: para;
+    }
+    #side{
+        grid-area: side;
+    }
+    #foo{
+        grid-area: foo;
+        text-align: center;
+        
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="nav" class="item">
+            <div class="div">home</div>
+            <div class="div">home</div>
+            <div class="div">home</div>
+            <div class="div">home</div>
+        </nav>
+        <div id="para "class="item" >
+            <p class="pp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti optio pariatur. Debitis quo
+                aliquam earum quam, nulla reiciendis quisquam. Cum ipsum est obcaecati optio nemo quidem quis pariatur!
+                Possimus perspiciatis reprehenderit dolore. Eaque.</p>
+        </div>
+        <aside id="side" class="item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam molestias quo?</p>
+        </aside>
+    </div>
+    <footer id="foo" class="item">
+        Lorem ipsum dolor sit amet.
+    </footer>
+
+</body>
+
+</html>
